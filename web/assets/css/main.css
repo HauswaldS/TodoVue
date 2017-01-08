@@ -1,0 +1,16 @@
+#wrapper {
+    margin-top: 50px;
+    background-color: white;
+}
+
+body {
+    background-color: #3498DB;
+}
+
+h1 {
+    font-size: 32px;
+}
+
+#lists p {
+    text-align: center;
+}
