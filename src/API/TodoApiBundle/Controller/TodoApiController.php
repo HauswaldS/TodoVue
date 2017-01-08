@@ -70,8 +70,7 @@ class TodoApiController extends Controller
             $form = $this->createForm(TodoType::class, $todo);
             $form->submit($request->request->all());
             if ($form->isValid()) {
-                $this->getDoctrine()->getManager()->persist($todo);
-                $this->getDoctrine()->getManager()->flush($todo);
+                $this->getDoctrine()->getManager()->flush();
                 return $todo;
             } else {
                 return $form;

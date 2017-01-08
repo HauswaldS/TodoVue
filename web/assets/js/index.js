@@ -40,9 +40,11 @@ new Vue({
             } else this.inputError = true;
         },
         setIsDone: function (todo) {
+            console.log(todo);
+            console.log(!todo.is_done);
             let content = {
                 content: todo.content,
-                isDone: todo.is_done
+                isDone: !todo.is_done
             };
             this.$http.put('http://localhost/todovue/web/app_dev.php/api/todos/' + todo.id, content).then(
                 (response) => {
